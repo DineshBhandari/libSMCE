@@ -54,4 +54,8 @@ std::size_t Print::println(char c) { return write(c) + println(); }
 
 std::size_t Print::println() { return print('\r') + print('\n'); }
 
-void Print::flush() {//for backward compatibility}
+// clang-format off
+void Print::flush() {
+    //for backward compatibility
+    }
+// // clang-format on
