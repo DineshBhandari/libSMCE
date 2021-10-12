@@ -18,7 +18,7 @@
 
 #ifndef ARDUINO_H
 #define ARDUINO_H
-
+#include <random>
 #include <algorithm>
 #include <cctype>
 #include <cmath>
@@ -97,10 +97,7 @@ inline bool isSpace(char c) noexcept { return std::isspace(+c); }
 inline bool isUpperCase(char c) noexcept { return std::isupper(+c); }
 inline bool isWhitespace(char c) noexcept { return c == ' ' || c == '\t'; }
 
-//** Random numbers **//
-inline long random(long min, long max) { return std::rand() % (max - min) + min; }
-inline long random(long max) { return random(0, max); }
-inline void randomSeed(unsigned long s) { std::srand(s); }
+
 
 //** Bits **//
 #define bit(n) (1 << (n))
