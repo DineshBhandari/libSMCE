@@ -58,6 +58,8 @@ int Stream::peekNextDigit(LookaheadMode lookahead, bool detectDecimal) {
             }
         case SKIP_ALL:
             break;
+        default:
+            return -1;
         }
         read();
     }
