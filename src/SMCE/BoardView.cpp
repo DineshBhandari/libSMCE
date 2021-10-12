@@ -133,8 +133,6 @@ VirtualPin VirtualPins::operator[](std::size_t pin_id) noexcept {
             return std::tie(chan.rx, chan.rx_mut);
         case Direction::tx:
             return std::tie(chan.tx, chan.tx_mut);
-        default:
-            return std::tie(chan.tx, chan.tx_mut);
         }
         unreachable();
     }();
